@@ -10,4 +10,6 @@
 
 @implementation Review
 
+@synthesize reviewerName, text, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;
+
 @end

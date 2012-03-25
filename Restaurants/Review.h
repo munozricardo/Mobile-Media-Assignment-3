@@ -17,4 +17,10 @@
     int numberOfUnhelpfulRatings;
 }
 
+//property
+@property (weak, nonatomic) IBOutlet UILabel *reviewerName;
+@property (weak, nonatomic) IBOutlet UILabel *text;
+@property (weak, nonatomic) IBOutlet UILabel *score;
+@property (weak, nonatomic) IBOutlet UILabel *text;
+
 @end
