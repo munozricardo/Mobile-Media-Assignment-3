@@ -17,4 +17,6 @@
     return 2012 - yearOpened;
 }
 
+
+
 @end

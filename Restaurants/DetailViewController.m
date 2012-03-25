@@ -74,6 +74,30 @@
     helpfulReviewLabel.text = [NSString stringWithFormat:@"%@ - %@", review1.text, review1.reviewerName];
     helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review - %i of %i found this review helpful", review1.numberOfHelpfulReviews, review1.numberOfHelpfulReviews + review1.numberOfUnhelpfulReviews];
     
+    //Array
+    restaurant.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3, review4, nil];
+    
+    //loop
+    NSArray* reviews = [restaurant reviews];
+    for (int i = 0; i < [reviews count]; i++) {
+        Review* review = [reviews objectAtIndex:i];
+        NSLog(@"Review Text: %@", review.text);
+    }
+    
+    if (review.score > 4)
+    {
+        NSLog(@"This is a great review");
+    }
+    else if (review.score > 2)
+    {
+        NSLog(@"This is a mediocre review");
+    }
+    else
+    {
+        NSLog(@"This is a terrible review");
+    }
+
+    
     
 }
 
