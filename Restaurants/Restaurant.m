@@ -17,16 +17,6 @@
     return 2012 - yearOpened;
 }
 
--(Review*) mostHelpfulReview
-{
-    NSArray* reviews = [restaurant reviews];
-    for (Review* review in [restaurant reviews]) {
-        if (review.score >5) {
-            <#statements#>
-        }
-    }
-    
-    
-}
+
 
 @end
