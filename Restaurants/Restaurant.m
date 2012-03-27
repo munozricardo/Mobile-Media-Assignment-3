@@ -11,7 +11,7 @@
 
 @synthesize reviewerName, text, reviews, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;
 
-@synthesize mostHelpful;
+//@synthesize mostHelpful;
 
 -(int)age
 {
@@ -22,7 +22,7 @@
 {
     Review* mostHelpful = nil;
     for (Review* review in reviews) {
-        if (review.score >5) {
+        if (review.numberOfHelpfulReviews >5) {
             if (review.reviewsHelpfulPercentage > mostHelpful.reviewsHelpfulPercentage)
             {
                 mostHelpful = review;

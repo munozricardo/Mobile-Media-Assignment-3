@@ -100,7 +100,7 @@
     
     
     //assign the most helpful review to helpfulReviewLabel
-    helpfulReviewLabel.text = mostHelpful.text;
+    helpfulReviewLabel.text = [[restaurant mostHelpfulReview] text];
     
 }
 

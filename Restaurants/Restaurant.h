@@ -36,6 +36,6 @@
 
 
 -(Review*) mostHelpfulReview;
-@property(readwrite) Review mostHelpful;
+//@property(readwrite) Review mostHelpful;
 
 @end
