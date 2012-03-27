@@ -11,6 +11,7 @@
 
 @synthesize reviewerName, text, reviews, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;
 
+@synthesize mostHelpful;
 
 -(int)age
 {
@@ -31,5 +32,6 @@
     return mostHelpful;
     
 }
+
 
 @end

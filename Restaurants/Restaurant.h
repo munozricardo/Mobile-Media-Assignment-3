@@ -34,4 +34,8 @@
 @property(readwrite) int numberOfHelpfulRatings;
 @property(readwrite) int numberOfUnhelpfulRatings;
 
+
+-(Review*) mostHelpfulReview;
+@property(readwrite) Review mostHelpful;
+
 @end
