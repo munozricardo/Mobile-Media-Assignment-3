@@ -79,8 +79,7 @@
     
     //loop
     NSArray* reviews = [restaurant reviews];
-    for (int i = 0; i < [reviews count]; i++) {
-        Review* review = [reviews objectAtIndex:i];
+    for (Review* review in [restaurant reviews]) {
         NSLog(@"Review Text: %@", review.text);
     }
     
@@ -97,6 +96,10 @@
         NSLog(@"This is a terrible review");
     }
 
+    
+    
+    
+    //assign the most helpful review to helpfulReviewLabel
     
     
 }

@@ -19,13 +19,16 @@
 
 -(Review*) mostHelpfulReview
 {
-    NSArray* reviews = [restaurant reviews];
-    for (Review* review in [restaurant reviews]) {
+    Review* mostHelpful = nil;
+    for (Review* review in reviews) {
         if (review.score >5) {
-            <#statements#>
+            if (review.reviewsHelpfulPercentage > mostHelpful.reviewsHelpfulPercentage)
+            {
+                mostHelpful = review;
+            }
         }
     }
-    
+    return mostHelpful;
     
 }
 
