@@ -9,7 +9,7 @@
 @implementation Restaurant
 @synthesize address, name, cuisineType, yearOpened;
 
-@synthesize reviewerName, text, reviews, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings, stars;
+@synthesize reviewerName, text, reviews, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;
 
 //@synthesize mostHelpful;
 
@@ -34,11 +34,12 @@
 
 -(float) averageCustomerReview
 {
-    //float* stars = nil;
+    int starsTotal = 0;
     for (Review* review in reviews){
-        stars = stars + review.score;
+        starsTotal = starsTotal + review.score;
     }
-    return stars;
+    
+    return (float)starsTotal/[reviews count];
 }
 
 

@@ -18,6 +18,7 @@
 @synthesize star3;
 @synthesize star4;
 @synthesize star5;
+@synthesize starsResult;
 
 #pragma mark - View lifecycle
 
@@ -69,10 +70,9 @@
     ageLabel.text = [NSString stringWithFormat:@"Est. %i (%i years ago)", restaurant.yearOpened, [restaurant age]];
     
     
-    //Displaying a review on the screen
-    
-    helpfulReviewLabel.text = [NSString stringWithFormat:@"%@ - %@", review1.text, review1.reviewerName];
-    helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review - %i of %i found this review helpful", review1.numberOfHelpfulReviews, review1.numberOfHelpfulReviews + review1.numberOfUnhelpfulReviews];
+    /////////////Displaying a review on the screen
+    //helpfulReviewLabel.text = [NSString stringWithFormat:@"%@ - %@", review1.text, review1.reviewerName];
+    //helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review - %i of %i found this review helpful", review1.numberOfHelpfulReviews, review1.numberOfHelpfulReviews + review1.numberOfUnhelpfulReviews];
     
     //Array
     restaurant.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3, review4, nil];
@@ -103,6 +103,15 @@
     helpfulReviewLabel.text = [[restaurant mostHelpfulReview] text];
     
     helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review - %i of %i found this review helpful",[[restaurant mostHelpfulReview] numberOfHelpfulReviews], [[restaurant mostHelpfulReview] numberOfHelpfulReviews] + [[restaurant mostHelpfulReview] numberOfUnhelpfulReviews]];
+    
+    //turn on the stars!!!!//
+    
+    float starsResult = 0;
+    starsResult = [restaurant averageCustomerReview];
+    
+    //
+    
+    
 }
 
 

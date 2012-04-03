@@ -20,10 +20,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *helpfulReviewPercentageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *helpfulReviewLabel;
 
+
 @property (weak, nonatomic) IBOutlet UIImageView *star1;
 @property (weak, nonatomic) IBOutlet UIImageView *star2;
 @property (weak, nonatomic) IBOutlet UIImageView *star3;
 @property (weak, nonatomic) IBOutlet UIImageView *star4;
 @property (weak, nonatomic) IBOutlet UIImageView *star5;
+
+//@property(readwrite) int starsResult;
 
 @end
