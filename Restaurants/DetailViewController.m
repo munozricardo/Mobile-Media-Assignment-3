@@ -101,6 +101,7 @@
     
     //assign the most helpful review to helpfulReviewLabel
     helpfulReviewLabel.text = [[restaurant mostHelpfulReview] text];
+    
     helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review - %i of %i found this review helpful",[[restaurant mostHelpfulReview] numberOfHelpfulReviews], [[restaurant mostHelpfulReview] numberOfHelpfulReviews] + [[restaurant mostHelpfulReview] numberOfUnhelpfulReviews]];
 }
 
