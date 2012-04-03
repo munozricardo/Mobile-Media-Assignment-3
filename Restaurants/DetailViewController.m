@@ -18,7 +18,6 @@
 @synthesize star3;
 @synthesize star4;
 @synthesize star5;
-@synthesize starsResult;
 
 #pragma mark - View lifecycle
 
@@ -80,7 +79,7 @@
     //loop
     NSArray* reviews = [restaurant reviews];
     for (Review* review in [restaurant reviews]) {
-        NSLog(@"Review Text: %@", review.text);
+       // NSLog(@"Review Text: %@", review.text);
     }
     
     if (review.score > 4)
@@ -109,7 +108,34 @@
     float starsResult = 0;
     starsResult = [restaurant averageCustomerReview];
     
-    //
+    if (starsResult > 0.5) 
+    {
+        star1.image = [UIImage imageNamed:@"Star_ON.png"];
+        if (starsResult > 1.5) 
+        {
+            star2.image = [UIImage imageNamed:@"Star_ON.png"];
+            if (starsResult > 2.5) 
+            {
+                star3.image = [UIImage imageNamed:@"Star_ON.png"];
+                if (starsResult > 3.5)
+                {
+                    star4.image = [UIImage imageNamed:@"Star_ON.png"];
+                    if (starsResult > 4.5)
+                    {
+                        star5.image = [UIImage imageNamed:@"Star_ON.png"];
+                        
+                    }
+                }
+               
+            }
+           
+        }
+    }
+    
+    
+    
+    
+   
     
     
 }

@@ -13,10 +13,7 @@
     NSString* name;
     NSString* cuisineType;
     int yearOpened;
-    
-    //int starsTotal;
-    //float stars;
-    
+        
     NSString* reviewerName;
     NSString* text;
     
@@ -36,13 +33,11 @@
 @property(readwrite) int score;
 @property(readwrite) int numberOfHelpfulRatings;
 @property(readwrite) int numberOfUnhelpfulRatings;
-//@property(readwrite) int starsTotal;
-@property(readwrite) float stars;
+
 
 
 
 -(Review*) mostHelpfulReview;
-//@property(readwrite) Review mostHelpful;
 
 -(float) averageCustomerReview;
 
