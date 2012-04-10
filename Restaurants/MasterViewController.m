@@ -61,6 +61,29 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+
+//Assignment 4
+
+-(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //cell identifier set in the storyboard 
+    NSString* cellIdentifier = @"RestaurantCell";
+    //reuse a cell, return a UITableVieCell with identifier
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    //see textLabel (name of Rest) and detailTextLabel (cuisine)
+    cell.textLabel.text = @"Pio Pio";
+    cell.detailTextLabel.text = @"Peruvian";
+    return cell;
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
