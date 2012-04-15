@@ -7,6 +7,7 @@
 #import "DetailViewController.h"
 
 @implementation DetailViewController
+
 @synthesize addressLabel;
 @synthesize navigationHeader;
 @synthesize cuisineLabel;

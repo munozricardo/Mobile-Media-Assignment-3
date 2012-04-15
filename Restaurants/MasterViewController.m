@@ -6,7 +6,10 @@
 
 #import "MasterViewController.h"
 
+
+
 @implementation MasterViewController
+@synthesize restaurants;
 
 
 - (void)awakeFromNib
@@ -24,8 +27,15 @@
 
 - (void)viewDidLoad
 {
+    
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    restaurants = [[NSMutableArray alloc] init];
+    
+///Pio Pio
+    
+    [restaurants addObject:@"Pio Pio"];
     
     Restaurant* piopio = [[Restaurant alloc] init];
     piopio.name = @"Pio Pio";
@@ -33,39 +43,73 @@
     piopio.cuisineType = @"Peruvian";
     piopio.yearOpened = 1995;
     
-    Review* review1 = [[Review alloc] init];
-    review1.text = @"What fab-u-lass chicken! We could eat it all day if we didn't have to stop to drink sangria!";
-    review1.reviewerName = @"The Addams";
-    review1.score = 5;
-    review1.numberOfHelpfulReviews = 19;
-    review1.numberOfUnhelpfulReviews = 8;
+    Review* pioReview1 = [[Review alloc] init];
+    pioReview1.text = @"What fab-u-lass chicken! We could eat it all day if we didn't have to stop to drink sangria!";
+    pioReview1.reviewerName = @"The Addams";
+    pioReview1.score = 5;
+    pioReview1.numberOfHelpfulReviews = 19;
+    pioReview1.numberOfUnhelpfulReviews = 8;
     
-    Review* review2 = [[Review alloc] init];
-    review2.text = @"I DONE POSTED ON DA INTARWEBS!";
-    review2.reviewerName = @"Anonymous";
-    review2.score = 1;
-    review2.numberOfHelpfulReviews = 0;
-    review2.numberOfUnhelpfulReviews = 45;
+    Review* pioReview2 = [[Review alloc] init];
+    pioReview2.text = @"I DONE POSTED ON DA INTARWEBS!";
+    pioReview2.reviewerName = @"Anonymous";
+    pioReview2.score = 1;
+    pioReview2.numberOfHelpfulReviews = 0;
+    pioReview2.numberOfUnhelpfulReviews = 45;
     
-    Review* review3 = [[Review alloc] init];
-    review3.text = @"Some of the best chicken I've ever eaten. A helpful tip: get some green (Aji) sauce to go, they sell it by the pint!";
-    review3.reviewerName = @"Jim Carr";
-    review3.score = 5;
-    review3.numberOfHelpfulReviews = 28;
-    review3.numberOfUnhelpfulReviews = 2;
+    Review* pioReview3 = [[Review alloc] init];
+    pioReview3.text = @"Some of the best chicken I've ever eaten. A helpful tip: get some green (Aji) sauce to go, they sell it by the pint!";
+    pioReview3.reviewerName = @"Jim Carr";
+    pioReview3.score = 5;
+    pioReview3.numberOfHelpfulReviews = 28;
+    pioReview3.numberOfUnhelpfulReviews = 2;
     
-    Review* review4 = [[Review alloc] init];
-    review4.text = @"While the food is amazing, they often simply don't pick up the phone when ordering out!";
-    review4.reviewerName = @"Paul";
-    review4.score = 4;
-    review4.numberOfHelpfulReviews = 14;
-    review4.numberOfUnhelpfulReviews = 5;
+    Review* pioReview4 = [[Review alloc] init];
+    pioReview4.text = @"While the food is amazing, they often simply don't pick up the phone when ordering out!";
+    pioReview4.reviewerName = @"Paul";
+    pioReview4.score = 4;
+    pioReview4.numberOfHelpfulReviews = 14;
+    pioReview4.numberOfUnhelpfulReviews = 5;
     
     
     /////////////Array
-    piopio.reviews = [[NSArray alloc] initWithObjects:review1, review2, review3, review4, nil];
+    piopio.reviews = [[NSArray alloc] initWithObjects:pioReview1, pioReview2, pioReview3, pioReview4, nil];
 
+
+///Teriyaki Boy
     
+    [restaurants addObject:@"Teriyaki Boy"];
+    
+    Restaurant* teriyakiboy = [[Restaurant alloc] init];
+    teriyakiboy.name = @"Teriyaki Boy";
+    teriyakiboy.address = @"1640 3rd Ave\nNew York, NY 10128";
+    teriyakiboy.cuisineType = @"Japanese";
+    teriyakiboy.yearOpened = 1995;
+    
+    Review* tboyReview1 = [[Review alloc] init];
+    tboyReview1.text = @"Their pork cutlet curry is as authentic as it can be.";
+    tboyReview1.reviewerName = @"NY U.";
+    tboyReview1.score = 4;
+    tboyReview1.numberOfHelpfulReviews = 16;
+    tboyReview1.numberOfUnhelpfulReviews = 6;
+    
+    Review* tboyReview2 = [[Review alloc] init];
+    tboyReview2.text = @"Teriyaki Boy is no frills and pretty good, especially for the price.";
+    tboyReview2.reviewerName = @"Le T.";
+    tboyReview2.score = 3;
+    tboyReview2.numberOfHelpfulReviews = 0;
+    tboyReview2.numberOfUnhelpfulReviews = 42;
+    
+    Review* tboyReview3 = [[Review alloc] init];
+    tboyReview3.text = @"Not bad a bad lunch choice. Like many others, I was drawn in by their prices.";
+    tboyReview3.reviewerName = @"Matt B.";
+    tboyReview3.score = 5;
+    tboyReview3.numberOfHelpfulReviews = 19;
+    tboyReview3.numberOfUnhelpfulReviews = 6;
+    
+    
+    /////////////Array
+    teriyakiboy.reviews = [[NSArray alloc] initWithObjects:tboyReview1, tboyReview2, tboyReview3, nil];
     
 
 }
@@ -104,11 +148,10 @@
 }
 
 
-//Assignment 4
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [restaurants count];
 }
 
 
@@ -119,11 +162,20 @@
     NSString* cellIdentifier = @"RestaurantCell";
     //reuse a cell, return a UITableVieCell with identifier
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    //find th eproper restaurant by asking in the array @ indexPath
+    Restaurant* currentRestaurant = [restaurants objectAtIndex:indexPath.row];
+    
+    
     //see textLabel (name of Rest) and detailTextLabel (cuisine)
-    cell.textLabel.text = @"Pio Pio";
-    cell.detailTextLabel.text = @"Peruvian";
+    cell.textLabel.text = currentRestaurant.name;
+    cell.detailTextLabel.text = currentRestaurant.cuisineType;
     return cell;
 }
+
+
+
+
 
 
 /*
