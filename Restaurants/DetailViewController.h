@@ -26,4 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *star4;
 @property (weak, nonatomic) IBOutlet UIImageView *star5;
 
+@property (weak, nonatomic) IBOutlet UILabel *restaurant;
+
+
 @end

@@ -163,7 +163,7 @@
     //reuse a cell, return a UITableVieCell with identifier
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    //find th eproper restaurant by asking in the array @ indexPath
+    //find the proper restaurant by asking in the array @ indexPath
     Restaurant* currentRestaurant = [restaurants objectAtIndex:indexPath.row];
     
     
@@ -175,7 +175,19 @@
 
 
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DetailViewController* detailVC = (DetailViewController*)
+    [segue destinationViewController];
+    
+    UITableView* table = [self tableView];
+    
+    NSIndexPath* indexPath = [table indexPathForSelectedRow];
+    
+    Restaurant* currentRestaurant = [restaurants objectAtIndex:indexPath.row];
+    
+    //detailVC.restaurant = currentRestaurant;
+}
 
 
 /*

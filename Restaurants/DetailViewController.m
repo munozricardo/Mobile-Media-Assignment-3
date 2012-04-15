@@ -20,6 +20,8 @@
 @synthesize star4;
 @synthesize star5;
 
+@synthesize restaurant;
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
