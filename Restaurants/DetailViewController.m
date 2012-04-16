@@ -20,7 +20,7 @@
 @synthesize star4;
 @synthesize star5;
 
-@synthesize restaurant;
+//@synthesize restaurant;
 
 #pragma mark - View lifecycle
 
