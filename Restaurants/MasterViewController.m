@@ -35,9 +35,11 @@
     
 ///Pio Pio
     
-    [restaurants addObject:@"Pio Pio"];
+    
     
     Restaurant* piopio = [[Restaurant alloc] init];
+    [restaurants addObject:piopio];
+    
     piopio.name = @"Pio Pio";
     piopio.address = @"746 First Avenue\nNew York, NY 10128";
     piopio.cuisineType = @"Peruvian";
@@ -78,9 +80,11 @@
 
 ///Teriyaki Boy
     
-    [restaurants addObject:@"Teriyaki Boy"];
+    
     
     Restaurant* teriyakiboy = [[Restaurant alloc] init];
+    [restaurants addObject:teriyakiboy];
+    
     teriyakiboy.name = @"Teriyaki Boy";
     teriyakiboy.address = @"1640 3rd Ave\nNew York, NY 10128";
     teriyakiboy.cuisineType = @"Japanese";
