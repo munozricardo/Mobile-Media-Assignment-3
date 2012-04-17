@@ -97,6 +97,11 @@
 }
 
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id) sender
+{
+    ReviewViewController* reviewVC = (ReviewViewController*) [segue destinationViewController];
+    reviewVC.restaurant = restaurant;
+}
 
 
 
@@ -142,6 +147,10 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    
+
+    
+    
 }
 
 
