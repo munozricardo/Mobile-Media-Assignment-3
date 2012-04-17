@@ -4,6 +4,7 @@
 //
 
 #import "Restaurant.h"
+#import "Review.h"
 
 
 @implementation Restaurant

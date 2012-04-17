@@ -19,8 +19,10 @@
 @synthesize star3;
 @synthesize star4;
 @synthesize star5;
+@synthesize reviewLabel;
+@synthesize restaurant;
+@synthesize showAllReviews;
 
-//@synthesize restaurant;
 
 #pragma mark - View lifecycle
 
@@ -96,6 +98,8 @@
 
 
 
+
+
 - (void)viewDidUnload
 {
     [self setAddressLabel:nil];
@@ -109,6 +113,8 @@
     [self setStar3:nil];
     [self setStar4:nil];
     [self setStar5:nil];
+    [self setReviewLabel:nil];
+    [self setShowAllReviews:nil];
     [super viewDidUnload];
 }
 

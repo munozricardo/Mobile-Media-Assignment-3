@@ -5,7 +5,7 @@
 //
 
 #import "MasterViewController.h"
-
+#import "Restaurant.h"
 
 
 @implementation MasterViewController
@@ -38,8 +38,7 @@
     
     
     Restaurant* piopio = [[Restaurant alloc] init];
-    [restaurants addObject:piopio];
-    
+        
     piopio.name = @"Pio Pio";
     piopio.address = @"746 First Avenue\nNew York, NY 10128";
     piopio.cuisineType = @"Peruvian";
@@ -75,20 +74,20 @@
     
     
     /////////////Array
-    piopio.reviews = [[NSArray alloc] initWithObjects:pioReview1, pioReview2, pioReview3, pioReview4, nil];
+    piopio.reviews = [[NSMutableArray alloc] initWithObjects:pioReview1, pioReview2, pioReview3, pioReview4, nil];
 
 
 ///Teriyaki Boy
-    
-    
-    
+        
     Restaurant* teriyakiboy = [[Restaurant alloc] init];
-    [restaurants addObject:teriyakiboy];
     
     teriyakiboy.name = @"Teriyaki Boy";
     teriyakiboy.address = @"1640 3rd Ave\nNew York, NY 10128";
     teriyakiboy.cuisineType = @"Japanese";
     teriyakiboy.yearOpened = 1995;
+    
+    self.restaurants = [[NSMutableArray alloc] initWithObjects:piopio, teriyakiboy, nil];
+    
     
     Review* tboyReview1 = [[Review alloc] init];
     tboyReview1.text = @"Their pork cutlet curry is as authentic as it can be.";
@@ -100,7 +99,7 @@
     Review* tboyReview2 = [[Review alloc] init];
     tboyReview2.text = @"Teriyaki Boy is no frills and pretty good, especially for the price.";
     tboyReview2.reviewerName = @"Le T.";
-    tboyReview2.score = 3;
+    tboyReview2.score = 1;
     tboyReview2.numberOfHelpfulReviews = 0;
     tboyReview2.numberOfUnhelpfulReviews = 42;
     
@@ -113,7 +112,7 @@
     
     
     /////////////Array
-    teriyakiboy.reviews = [[NSArray alloc] initWithObjects:tboyReview1, tboyReview2, tboyReview3, nil];
+    teriyakiboy.reviews = [[NSMutableArray alloc] initWithObjects:tboyReview1, tboyReview2, tboyReview3, nil];
     
 
 }
@@ -181,8 +180,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    DetailViewController* detailVC = (DetailViewController*)
-    [segue destinationViewController];
+    DetailViewController* detailVC = (DetailViewController*)[segue destinationViewController];
     
     UITableView* table = [self tableView];
     
@@ -190,7 +188,7 @@
     
     Restaurant* currentRestaurant = [restaurants objectAtIndex:indexPath.row];
     
-    //detailVC.restaurant = currentRestaurant;
+    detailVC.restaurant = currentRestaurant;
 }
 
 

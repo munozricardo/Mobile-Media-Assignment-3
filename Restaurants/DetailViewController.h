@@ -6,6 +6,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Restaurant.h"
+#import "Review.h"
 
 @interface DetailViewController : UIViewController
 {
@@ -26,7 +27,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *star4;
 @property (weak, nonatomic) IBOutlet UIImageView *star5;
 
-@property(readwrite, strong) NSArray* restaurant;
-
+@property (weak, nonatomic) IBOutlet UILabel *reviewLabel;
+@property(readwrite, strong) Restaurant* restaurant;
+@property (weak, nonatomic) IBOutlet UIButton *showAllReviews;
 
 @end
