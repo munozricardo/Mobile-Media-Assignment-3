@@ -35,7 +35,7 @@
 @property(readwrite) int numberOfHelpfulRatings;
 @property(readwrite) int numberOfUnhelpfulRatings;
 
-
+@property BOOL isFavorite;
 
 
 -(Review*) mostHelpfulReview;

@@ -7,6 +7,7 @@
 #import "DetailViewController.h"
 
 @implementation DetailViewController
+@synthesize favoriteButton;
 
 @synthesize addressLabel;
 @synthesize navigationHeader;
@@ -22,6 +23,7 @@
 @synthesize reviewLabel;
 @synthesize restaurant;
 @synthesize showAllReviews;
+@synthesize markAsFavorite;
 
 
 #pragma mark - View lifecycle
@@ -105,6 +107,8 @@
 
 
 
+
+
 - (void)viewDidUnload
 {
     [self setAddressLabel:nil];
@@ -120,6 +124,8 @@
     [self setStar5:nil];
     [self setReviewLabel:nil];
     [self setShowAllReviews:nil];
+    [self setMarkAsFavorite:nil];
+    [self setFavoriteButton:nil];
     [super viewDidUnload];
 }
 
@@ -154,4 +160,14 @@
 }
 
 
+- (IBAction)markAsFavorite:(id)sender {
+    isFavorite = TRUE;
+    
+    
+}
+
+
 @end
+
+
+

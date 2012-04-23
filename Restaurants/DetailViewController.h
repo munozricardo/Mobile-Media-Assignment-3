@@ -32,4 +32,7 @@
 @property(readwrite, strong) Restaurant* restaurant;
 @property (weak, nonatomic) IBOutlet UIButton *showAllReviews;
 
+- (IBAction)markAsFavorite:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *favoriteButton;
+
 @end

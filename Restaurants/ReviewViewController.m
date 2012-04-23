@@ -30,8 +30,10 @@
     UILabel* reviewHelpfulnessLabel = (UILabel*)[cell viewWithTag:2];
     
     Review* reviewForIndexPath = [restaurant.reviews objectAtIndex:indexPath.row];
+    
     reviewTextLabel.text = reviewForIndexPath.text;
     reviewHelpfulnessLabel.text = [NSString stringWithFormat:@"%i of %i found this review helpful", reviewForIndexPath.numberOfHelpfulReviews,reviewForIndexPath.numberOfHelpfulReviews + reviewForIndexPath.numberOfUnhelpfulReviews];
+
     return cell;   
 }
 
