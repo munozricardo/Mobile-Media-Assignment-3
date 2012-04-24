@@ -23,8 +23,6 @@
 @synthesize reviewLabel;
 @synthesize restaurant;
 @synthesize showAllReviews;
-@synthesize markAsFavorite;
-
 
 #pragma mark - View lifecycle
 
@@ -106,9 +104,6 @@
 }
 
 
-
-
-
 - (void)viewDidUnload
 {
     [self setAddressLabel:nil];
@@ -122,9 +117,8 @@
     [self setStar3:nil];
     [self setStar4:nil];
     [self setStar5:nil];
-    [self setReviewLabel:nil];
-    [self setShowAllReviews:nil];
-    [self setMarkAsFavorite:nil];
+    //[self setReviewLabel:nil];
+    //[self setShowAllReviews:nil];
     [self setFavoriteButton:nil];
     [super viewDidUnload];
 }
@@ -160,13 +154,15 @@
 }
 
 
+
+
+
 - (IBAction)markAsFavorite:(id)sender {
-    isFavorite = TRUE;
     
-    
+    //
 }
-
-
+- (IBAction)gg:(id)sender {
+}
 @end
 
 

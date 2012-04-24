@@ -16,7 +16,7 @@
         
     NSString* reviewerName;
     NSString* text;
-    
+    BOOL isFavorite;
     
 }
 
