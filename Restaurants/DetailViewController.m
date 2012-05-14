@@ -155,14 +155,12 @@
 
 
 
-
-
 - (IBAction)markAsFavorite:(id)sender {
-    
-    //
+    favoriteButton.image = [UIImage imageNamed:@"heart_selected.png"];
 }
-- (IBAction)gg:(id)sender {
-}
+
+
+
 @end
 
 
